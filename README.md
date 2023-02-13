@@ -18,4 +18,4 @@ The `ProductContext` component fetches the BigCommerce and WordPress data from t
 
 ### Example
 
-![Example Screenshot](https://github.com/RossoMaguire/storefront-poc/blob/master/example.png?raw=true)
+![Example Screenshot](https://github.com/RossoMaguire/storefront-product-poc/blob/master/example.png?raw=true)
