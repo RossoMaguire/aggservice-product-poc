@@ -1,0 +1,3 @@
+interface CardSectionProps {
+  source: string;
+}
