@@ -29,6 +29,9 @@ You can open a few tabs alongside the app to show the different parts we are bri
 
 1. Open the [ACM admin in WordPress](https://ecombluedemo.wpengine.com/wp-admin/admin.php?page=atlas-content-modeler&view=edit-model&id=product) to show the content model
 
+<img width="2074" alt="Screenshot 2023-02-14 at 13 16 22" src="https://user-images.githubusercontent.com/48026075/218749923-8a9ff373-f430-4114-9d11-df48615af1ac.png">
+
+
 2. Open the [WPGraphQL IDE](e&page=graphiql-ide&query=I4VwpgTgngBAcmA7gRXNGBvAUDGAHCAewBMQBjAFwAoBLYgLhgCIAOANgCYmAaGOgFSh4wjACIBBfuIBC4gMoBRAPoBJUQEpMOXDAB2AQwC2YbbmJgAzmQg08FGoV2m%2Bh-QHMw2HTuPEa%2BlQowQwBVCAAbZwBfZwA3OjBCZyCyAAtdGjJ9cNEwCn0acIttGKigA) and paste the below query (then hit play) to show a request for just the WordPress product content
 
 ```
