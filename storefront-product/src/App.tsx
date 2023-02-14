@@ -16,7 +16,7 @@ function App() {
     <div className='App'>
       <ApolloProvider client={unifiedClient}>
         <ProductProvider>
-          <Center pt={100}>
+          <Center pt={20}>
             <ProductCard />
           </Center>
         </ProductProvider>

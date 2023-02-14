@@ -14,7 +14,7 @@ const Video = ({ source }: CardSectionProps) => {
   }
 
   return (
-    <GridItem id='video' colSpan={3} rowSpan={3}>
+    <GridItem id='video' colSpan={3} rowSpan={3} style={{ overflow: 'hidden' }}>
       <SourceLogo src={source} />
       <iframe
         width='100%'
