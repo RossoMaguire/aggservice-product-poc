@@ -10,6 +10,8 @@ The `ProductContext` component fetches the BigCommerce and WordPress data from t
 
    `VITE_UNIFIED_BASE_URL`=the graphql endpoint of the storefront aggregation service wether you have it running locally or somewhere accessible
 
+    The app on Vercel is using this one: https://ecomm-api-aggregation-poc-uim5o2scja-nw.a.run.app/graphql
+
 2. To run the frontend (product page)
 
    `cd storefront-product`
