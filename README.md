@@ -4,7 +4,7 @@ The `storefront-product` directory holds the frontend (product page) which displ
 
 The `ProductContext` component fetches the BigCommerce and WordPress data from the storefront API aggregation service, which is doing the stitching, and makes it available globally to the other components that need to render their specific information from it.
 
-### Running the app
+### Running the app for local development
 
 1. Create the following `.env.local` files:
 
@@ -22,7 +22,7 @@ The `ProductContext` component fetches the BigCommerce and WordPress data from t
 
 ### Demo tips
 
-The application is [deployed here](). If you open the `Network` tab in **_Chrome Dev Tools_** and reload the page you will see a request to `graphql`.
+The application is [deployed here](https://storefront-product-poc.vercel.app/). If you open the `Network` tab in **_Chrome Dev Tools_** and reload the page you will see a request to `graphql`.
 Click on this and go to the `Preview` tab to open up the unified response.
 
 You can open a few tabs alongside the app to show the different parts we are bringing together with this concept.
