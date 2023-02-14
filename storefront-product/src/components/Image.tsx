@@ -16,11 +16,9 @@ const Image = ({ source }: CardSectionProps) => {
 
   return (
     <GridItem id='image' colSpan={2} rowSpan={2}>
-      {unifiedResponse?.unifiedData?.BigC_node?.prices?.salePrice && (
-        <SaleTag />
-      )}
+      {unifiedResponse?.bcData?.prices?.salePrice && <SaleTag />}
       <img
-        src={unifiedResponse?.unifiedData?.product?.image?.mediaItemUrl}
+        src={unifiedResponse?.wpData?.image?.mediaItemUrl}
         alt='unified Image'
         style={{ width: '100%' }}
       />

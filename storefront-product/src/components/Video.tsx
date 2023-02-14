@@ -19,7 +19,7 @@ const Video = ({ source }: CardSectionProps) => {
       <iframe
         width='100%'
         height='100%'
-        src={unifiedResponse?.unifiedData?.product?.video}
+        src={unifiedResponse?.wpData?.video}
         title='YouTube video player'
       ></iframe>
     </GridItem>

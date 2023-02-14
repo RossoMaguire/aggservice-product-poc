@@ -18,16 +18,15 @@ const ProductData = ({ source }: CardSectionProps) => {
       <SourceLogo src={source} />
       <Flex alignItems='left' p={4} justifyContent='space-between'>
         <Text>
-          <b>SKU:</b> {unifiedResponse?.unifiedData?.BigC_node?.sku}
+          <b>SKU:</b> {unifiedResponse?.bcData?.sku}
         </Text>
         <Text>
           <b>Price:</b>{' '}
-          {unifiedResponse?.unifiedData?.BigC_node?.prices?.salePrice?.value ||
-            unifiedResponse?.unifiedData?.BigC_node?.basePrice?.value}
+          {unifiedResponse?.bcData?.prices?.salePrice?.value ||
+            unifiedResponse?.bcData?.basePrice?.value}
         </Text>
         <Text>
-          <b>Availability:</b>{' '}
-          {unifiedResponse?.unifiedData?.BigC_node?.availabilityV2?.status}
+          <b>Availability:</b> {unifiedResponse?.bcData?.availabilityV2?.status}
         </Text>
       </Flex>
     </GridItem>

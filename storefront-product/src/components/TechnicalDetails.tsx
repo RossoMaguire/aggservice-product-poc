@@ -18,7 +18,7 @@ const TechnicalDetails = ({ source }: CardSectionProps) => {
       <SourceLogo src={source} />
       <div
         dangerouslySetInnerHTML={{
-          __html: unifiedResponse?.unifiedData?.product?.technicalDetails,
+          __html: unifiedResponse?.wpData?.technicalDetails,
         }}
         style={{ whiteSpace: 'pre-line', textAlign: 'left', padding: '14px' }}
       ></div>

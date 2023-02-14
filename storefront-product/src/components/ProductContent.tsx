@@ -18,11 +18,11 @@ const ProductContent = ({ source }: CardSectionProps) => {
       <Box w='100%' p={4}>
         <SourceLogo src={source} />
         <Heading as='h2' size='xl'>
-          {unifiedResponse?.unifiedData?.product?.name}
+          {unifiedResponse?.wpData?.name}
         </Heading>
         <div
           dangerouslySetInnerHTML={{
-            __html: unifiedResponse?.unifiedData?.product?.description,
+            __html: unifiedResponse?.wpData?.description,
           }}
           style={{
             whiteSpace: 'pre-line',
