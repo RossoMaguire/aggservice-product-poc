@@ -19,3 +19,50 @@ The `ProductContext` component fetches the BigCommerce and WordPress data from t
 ### Example
 
 ![Example Screenshot](https://github.com/RossoMaguire/storefront-product-poc/blob/master/example.png?raw=true)
+
+### Demo tips
+
+You can open a few tabs alongside the application to show the different parts we are bringing together with this concept.
+
+1. Open the [ACM admin in WordPress](https://ecombluedemo.wpengine.com/wp-admin/admin.php?page=atlas-content-modeler&view=edit-model&id=product) to show the content model
+
+2. Open the [WPGraphQL IDE](e&page=graphiql-ide&query=I4VwpgTgngBAcmA7gRXNGBvAUDGAHCAewBMQBjAFwAoBLYgLhgCIAOANgCYmAaGOgFSh4wjACIBBfuIBC4gMoBRAPoBJUQEpMOXDAB2AQwC2YbbmJgAzmQg08FGoV2m%2Bh-QHMw2HTuPEa%2BlQowQwBVCAAbZwBfZwA3OjBCZyCyAAtdGjJ9cNEwCn0acIttGKigA) and paste the below query (then hit play) to show a request for just the WordPress product content
+
+```
+query NewQuery {
+  product(id: "862", idType: DATABASE_ID) {
+    name
+    description
+    image{
+      mediaItemUrl
+    }
+    video
+    technicalDetails
+  }
+}
+```
+
+3. Open the [BigCommerce Storefront API playground](https://store-sowr02yzax.mybigcommerce.com/manage/settings-list) (scroll to bottom to find the link), navigate to the tab for **_Single Product_** and paste the below query (then hit play) to show a request for just the BigCommerce product data
+
+```
+ query productById {
+   site {
+     product(entityId: 86) {
+        sku
+        availabilityV2 {
+          status
+         }
+         prices {
+           basePrice {
+            value
+           }
+           salePrice {
+            value
+           }
+         }
+     }
+  }
+ }
+```
+
+4. Open the [unified query](https://github.com/RossoMaguire/storefront-product-poc/blob/master/storefront-product/src/graphQL/unified-product.ts) that this application uses, to show the above 2 queries as one. An example unified response can also be shown [which is located here](https://github.com/RossoMaguire/storefront-product-poc/blob/master/unified-response-sample.json)
