@@ -17,7 +17,7 @@ export function ProductProvider({ children }: any) {
     error: unifiedError,
   } = useApolloQuery(GET_UNIFIED_PRODUCT, {
     // This is for one specific product
-    variables: { productId: 862, idType: 'DATABASE_ID' },
+    variables: { productId: 900, idType: 'DATABASE_ID' },
   });
 
   const value = {
