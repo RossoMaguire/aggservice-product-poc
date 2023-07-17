@@ -30,7 +30,6 @@ You can open a few tabs alongside the app to show the different parts we are bri
 
 <img width="1760" alt="Screenshot 2023-07-17 at 14 25 59" src="https://github.com/RossoMaguire/aggservice-product-poc/assets/48026075/67941196-3b25-4757-8448-15be8ce0adf1">
 
-
 2. [Open the WPGraphQL IDE in WordPress](https://bpatlasprodsho.wpengine.com/wp-admin/admin.php?page=graphiql-ide) and paste the below query (then hit play) to show a request for just the WordPress product content:
 
 ```
