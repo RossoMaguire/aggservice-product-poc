@@ -22,4 +22,74 @@ The `ProductContext` component fetches the Shopify and WordPress data from the a
 
 ### Demo tips
 
-TBC
+The application is deployed [here](https://aggservice-product-i4kb4yik6-rossomaguire.vercel.app/). If you open the Network tab in Chrome Dev Tools and reload the page you will see a request to graphql. Click on this and go to the Preview tab to open up the unified response.
+
+You can open a few tabs alongside the app to show the different parts we are bringing together with this concept.
+
+1. [Open the ACF Dashboard in WordPress](https://bpatlasprodsho.wpengine.com/wp-admin/post.php?post=4755&action=edit) to show the ACF product model and the various fields that belong to it. The [product itself that is served by the unified API can be found here](https://bpatlasprodsho.wpengine.com/wp-admin/edit.php?post_type=product)
+
+// image here 
+
+2. [Open the WPGraphQL IDE in WordPress](https://bpatlasprodsho.wpengine.com/wp-admin/admin.php?page=graphiql-ide) and paste the below query (then hit play) to show a request for just the WordPress product content:
+
+```
+query GetProduct {
+  product(id: "radiowave-shirt", idType: SLUG) {
+    title
+    slug
+    productFields {
+      title
+      technicalDetails
+      description
+      video
+      image {
+        node {
+          mediaItemUrl
+        }
+      }
+    }
+  }
+}
+```
+
+3. [Open the Shopify Storefront API playground](https://admin.shopify.com/store/blueprintbetatest/apps/5a3c93b0e9bc8d5abf63531fcd829b5d) and paste the below query (then hit play) to show a request for just the Shopify product data which matches the slug of the WordPress ACF product seen in step 1.
+
+```
+{
+  product(handle: "radiowave-shirt") {
+    collections(first: 100) {
+      nodes {
+        handle
+        title
+      }
+    }
+    variants(first: 100) {
+      nodes {
+        id
+        sku
+        quantityAvailable
+        image {
+          url
+        }
+        selectedOptions {
+          name
+          value
+        }
+        price {
+          amount
+          currencyCode
+        }
+        compareAtPrice {
+          amount
+          currencyCode
+        }
+      }
+    }
+  }
+}
+```
+
+4. Open the [unified query endpoint that this application uses](https://aggservice-api-poc.wundergraph.dev/operations/Product?slug=%22radiowave-shirt%22), to show the above 2 queries as one served from Wundergraph.
+
+
+
