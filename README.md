@@ -18,7 +18,7 @@ The `ProductContext` component fetches the Shopify and WordPress data from the a
 
 ### Example
 
-![Example Screenshot](https://github.com/RossoMaguire/aggservice-product-poc/blob/master/example.png?raw=true)
+![Example Screenshot](https://github.com/RossoMaguire/aggservice-product-poc/blob/5e5f2010ad65ded4d8df4e4c0dd7ce24135d4e93/storefront-product/example.png)
 
 ### Demo tips
 
