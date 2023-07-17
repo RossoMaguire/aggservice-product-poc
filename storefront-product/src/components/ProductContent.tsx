@@ -3,26 +3,21 @@ import { useProductContext } from './context/ProductContext';
 import SourceLogo from './SourceLogo';
 
 const ProductContent = ({ source }: CardSectionProps) => {
-  const { unifiedResponse } = useProductContext();
+  const { unifiedProduct } = useProductContext();
 
-  if (unifiedResponse?.unifiedLoading) {
-    return <p>...Loading</p>;
-  }
-
-  if (unifiedResponse?.unifiedError) {
-    return <p>Error</p>;
-  }
+  const title = unifiedProduct?.data?.wordpress_product?.productFields?.title
+  const description = unifiedProduct?.data?.wordpress_product?.productFields?.description
 
   return (
     <GridItem id='product-details' colSpan={3} rowSpan={1} textAlign='left'>
       <Box w='100%' p={4}>
         <SourceLogo src={source} />
         <Heading as='h2' size='xl'>
-          {unifiedResponse?.wpData?.name}
+          {title}
         </Heading>
         <div
           dangerouslySetInnerHTML={{
-            __html: unifiedResponse?.wpData?.description,
+            __html: description,
           }}
           style={{
             whiteSpace: 'pre-line',

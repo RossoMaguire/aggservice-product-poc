@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 docker-instructions.txt
+.DS_Store

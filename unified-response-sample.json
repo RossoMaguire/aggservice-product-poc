@@ -1,32 +1,57 @@
 {
   "data": {
-    "product": {
-      "sku": "ABS",
-      "name": "[Sample] Able Brewing System",
-      "description": "<p>Stemming from an intense passion for the most flavourful cup of coffee, Able Brewing set out to create a brewer that was as aesthetically pleasing as it was functional. They imagined a product that would easily find itself at home in your kitchen during your morning routine. A product that would successfully showcase the Kone filter that they had painstakingly perfected. <br /><br />Inspired by Japanese and Mid-Century design, the resulting brewer elegantly serves pour over coffee. The multi-part design allows the top brewer portion to be removed once brewing is complete leaving a single pot server. The all ceramic exterior is dishwasher safe.</p>",
-      "image": {
-        "mediaItemUrl": "https://ecombluedemo.wpengine.com/wp-content/uploads/2023/02/able-brewing-system.jpeg",
-        "__typename": "MediaItem"
-      },
-      "video": "https://www.youtube.com/embed/_XgBasLKbCc",
-      "technicalDetails": "Made in the USA\r\n\r\nMeasures 20.3 x 15.2 cm / 8 in x 6 in\r\n\r\nCapacity 946 ml / 32 oz.",
-      "bcSite": {
-        "product": {
-          "sku": "ABS",
-          "availabilityV2": {
-            "status": "Available",
-            "__typename": "BigC_ProductAvailable"
+      "wordpress_product": {
+          "title": "Radiowave Shirt",
+          "description": "The most common form of commercial T-shirt decoration is screen-printing. In screen-printing, a design is separated into individual colors. Plastisol or water based inks are applied to the shirt through mesh screens which limits the areas where ink is deposited. In most commercial T-shirt printing, the specific colors in the design are used. 100% Cotton White To achieve a wider color spectrum with a limited number of colors, process printing or simulated process is effective. Process printing is best suited for light colored shirts. Simulated process is best suited for dark colored shirts. Eco-friendly Materials Before the hippie movement Rit Dye was known as a hobby for older women. Other methods of decorating shirts include using paints, markers, fabric transfer crayons, dyes, spray paint, and many more. Some techniques that can be used include sponging, stenciling, daubing, stamping, screen printing, bleaching, and many more.",
+          "productFields": {
+              "title": "Radiowave Shirt",
+              "technicalDetails": "Color: Blue \r\n\r\nSize: L | M | S | XS \r\n\r\nFabric: Wool ",
+              "video": "https:\/\/www.youtube.com\/embed\/Z5AKts0qReI",
+              "image": {
+                  "node": {
+                      "mediaItemUrl": "https:\/\/bpatlasprodsho.wpengine.com\/wp-content\/uploads\/2023\/07\/shirt-charcoal.webp"
+                  }
+              }
           },
-          "prices": {
-            "basePrice": { "value": 225, "__typename": "BigC_Money" },
-            "salePrice": { "value": 200, "__typename": "BigC_Money" },
-            "__typename": "BigC_Prices"
-          },
-          "__typename": "BigC_Product"
-        },
-        "__typename": "BigC_Site"
-      },
-      "__typename": "Product"
-    }
+          "slug": "radiowave-shirt",
+          "_join": {
+              "shopify_product": {
+                  "collections": {
+                      "nodes": [
+                          {
+                              "handle": "clothing",
+                              "title": "Clothing"
+                          }
+                      ]
+                  },
+                  "variants": {
+                      "nodes": [
+                          {
+                              "id": "gid://shopify/ProductVariant/44876432343343",
+                              "sku": "RWV-1",
+                              "quantityAvailable": 10,
+                              "image": {
+                                  "url": "https://cdn.shopify.com/s/files/1/0695/2478/3407/products/shirt-charcoal.jpg?v=1681383187"
+                              },
+                              "selectedOptions": [
+                                  {
+                                      "name": "Title",
+                                      "value": "Default Title"
+                                  }
+                              ],
+                              "price": {
+                                  "amount": "18.0",
+                                  "currencyCode": "USD"
+                              },
+                              "compareAtPrice": {
+                                  "amount": "20.0",
+                                  "currencyCode": "USD"
+                              }
+                          }
+                      ]
+                  }
+              }
+          }
+      }
   }
 }

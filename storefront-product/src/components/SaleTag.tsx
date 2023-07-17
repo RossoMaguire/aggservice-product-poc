@@ -18,7 +18,7 @@ const SaleTag = () => {
         }}
       >
         Sale!
-        <SourceLogo src='bigcommerce.png' />
+        <SourceLogo src='shopify.svg' />
       </span>
     </>
   );

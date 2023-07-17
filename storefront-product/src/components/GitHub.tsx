@@ -12,7 +12,7 @@ const GitHub = () => {
       <Box float='right'>
         Browse this code on
         <a
-          href='https://github.com/RossoMaguire/storefront-product-poc'
+          href='https://github.com/RossoMaguire/aggservice-product-poc'
           target='_blank'
         >
           <img

@@ -3,15 +3,9 @@ import { useProductContext } from './context/ProductContext';
 import SourceLogo from './SourceLogo';
 
 const Video = ({ source }: CardSectionProps) => {
-  const { unifiedResponse } = useProductContext();
+  const { unifiedProduct } = useProductContext();
 
-  if (unifiedResponse?.unifiedLoading) {
-    return <p>...Loading</p>;
-  }
-
-  if (unifiedResponse?.unifiedError) {
-    return <p>Error</p>;
-  }
+  const video = unifiedProduct?.data?.wordpress_product?.productFields?.video
 
   return (
     <GridItem id='video' colSpan={3} rowSpan={3} style={{ overflow: 'hidden' }}>
@@ -19,7 +13,7 @@ const Video = ({ source }: CardSectionProps) => {
       <iframe
         width='100%'
         height='100%'
-        src={unifiedResponse?.wpData?.video}
+        src={video}
         title='YouTube video player'
       ></iframe>
     </GridItem>

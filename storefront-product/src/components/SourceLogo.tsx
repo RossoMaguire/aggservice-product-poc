@@ -10,7 +10,7 @@ const SourceLogo = ({ src }: SourceLogoProps) => {
         alt='Source Logo'
         style={{
           height: '30px',
-          paddingLeft: src === 'bigcommerce.png' ? '14px' : 0,
+          paddingLeft: src === 'shopify.svg' ? '14px' : 0,
         }}
       />
     </span>

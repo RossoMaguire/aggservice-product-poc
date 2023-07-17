@@ -4,21 +4,16 @@ import SourceLogo from './SourceLogo';
 import SaleTag from './SaleTag';
 
 const Image = ({ source }: CardSectionProps) => {
-  const { unifiedResponse } = useProductContext();
+  const { unifiedProduct } = useProductContext();
 
-  if (unifiedResponse?.unifiedLoading) {
-    return <p>...Loading</p>;
-  }
-
-  if (unifiedResponse?.unifiedError) {
-    return <p>Error</p>;
-  }
+  const onSale = unifiedProduct?.data?.wordpress_product?._join?.shopify_product?.variants?.nodes[0]?.compareAtPrice;
+  const image = unifiedProduct?.data?.wordpress_product?.productFields?.image?.node?.mediaItemUrl;
 
   return (
     <GridItem id='image' colSpan={2} rowSpan={2}>
-      {unifiedResponse?.bcData?.prices?.salePrice && <SaleTag />}
+      {onSale && <SaleTag />}
       <img
-        src={unifiedResponse?.wpData?.image?.mediaItemUrl}
+        src={image}
         alt='unified Image'
         style={{ width: '100%' }}
       />

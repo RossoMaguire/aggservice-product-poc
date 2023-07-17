@@ -1,6 +1,6 @@
-import { createContext, useContext } from 'react';
-import { useQuery as useApolloQuery } from '@apollo/client';
-import GET_UNIFIED_PRODUCT from '../../graphQL/unified-product';
+import { createContext, useContext,useEffect, useState } from 'react';
+import config from '../../config';
+
 
 const defaultValues: any = {};
 export const ProductContext = createContext(defaultValues);
@@ -10,24 +10,28 @@ export function useProductContext() {
 }
 
 export function ProductProvider({ children }: any) {
-  // sourcing unified data from the Storefront POC aggregation server
-  const {
-    data: unifiedData,
-    loading: unifiedLoading,
-    error: unifiedError,
-  } = useApolloQuery(GET_UNIFIED_PRODUCT, {
-    // This is for one specific product
-    variables: { productId: 900, idType: 'DATABASE_ID' },
-  });
+  
+  const [unifiedProduct, setUnifiedProduct] = useState()
+  
+  const params = "?slug='radiowave-shirt'";
+
+  useEffect(() => {
+    const fetchUnifiedProduct = async () => {
+      const response = await fetch(import.meta.env.VITE_UNIFIED_BASE_URL+params);
+      const product = await response.json();
+      setUnifiedProduct(product)
+    }
+
+    fetchUnifiedProduct();
+
+  }, [])
+
+  console.log(unifiedProduct)
 
   const value = {
-    unifiedResponse: {
-      bcData: unifiedData?.product?.bcSite?.product,
-      wpData: unifiedData?.product,
-      unifiedLoading,
-      unifiedError,
-    },
-  };
+    unifiedProduct
+  }
+
 
   return (
     <>

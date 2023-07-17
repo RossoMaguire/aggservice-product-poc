@@ -17,7 +17,7 @@ const ProductCard = () => {
     >
       <Image source='wordpress.jpeg' />
       <ProductContent source='wordpress.jpeg' />
-      <ProductData source='bigcommerce.png' />
+      <ProductData source='shopify.svg' />
       <TechnicalDetails source='wordpress.jpeg' />
       <Video source='wordpress.jpeg' />
       <GitHub />

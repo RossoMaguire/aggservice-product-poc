@@ -3,30 +3,29 @@ import { useProductContext } from './context/ProductContext';
 import SourceLogo from './SourceLogo';
 
 const ProductData = ({ source }: CardSectionProps) => {
-  const { unifiedResponse } = useProductContext();
+  const { unifiedProduct } = useProductContext();
 
-  if (unifiedResponse?.unifiedLoading) {
-    return <p>...Loading</p>;
-  }
-
-  if (unifiedResponse?.unifiedError) {
-    return <p>Error</p>;
-  }
+  const sku = unifiedProduct?.data?.wordpress_product?._join?.shopify_product?.variants?.nodes[0]?.sku
+  const comparePrice = unifiedProduct?.data?.wordpress_product?._join?.shopify_product?.variants?.nodes[0]?.compareAtPrice?.amount
+  const price = unifiedProduct?.data?.wordpress_product?._join?.shopify_product?.variants?.nodes[0]?.price?.amount
+  const available = unifiedProduct?.data?.wordpress_product?._join?.shopify_product?.variants?.nodes[0]?.quantityAvailable
 
   return (
     <GridItem id='product-details' colSpan={3} rowSpan={1}>
       <SourceLogo src={source} />
       <Flex alignItems='left' p={4} justifyContent='space-between'>
         <Text>
-          <b>SKU:</b> {unifiedResponse?.bcData?.sku}
+          <b>SKU:</b> {sku}
         </Text>
         <Text>
           <b>Price:</b>{' '}
-          {unifiedResponse?.bcData?.prices?.salePrice?.value ||
-            unifiedResponse?.bcData?.basePrice?.value}
+          $
+          {comparePrice || price}
+          {' '}
+          {comparePrice && <del>{price}</del>}
         </Text>
         <Text>
-          <b>Availability:</b> {unifiedResponse?.bcData?.availabilityV2?.status}
+          <b>Availability:</b> {available}
         </Text>
       </Flex>
     </GridItem>
