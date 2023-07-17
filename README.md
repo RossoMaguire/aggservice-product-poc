@@ -91,5 +91,8 @@ query GetProduct {
 
 4. Open the [unified query endpoint that this application uses](https://aggservice-api-poc.wundergraph.dev/operations/Product?slug=%22radiowave-shirt%22), to show the above 2 queries as one served from Wundergraph.
 
+### Further information
+
+The codebase for the Wundergraph server i.e [the storefront aggregation service that this application uses is located here](https://github.com/RossoMaguire/aggservice-api-poc/tree/main)
 
 
