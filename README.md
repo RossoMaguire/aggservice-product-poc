@@ -8,7 +8,7 @@ The `ProductContext` component fetches the Shopify and WordPress data from the a
 
 1. Create the following `.env.local` files:
 
-   `VITE_UNIFIED_BASE_URL`=the graphql endpoint of the storefront aggregation service wether you have it running locally or somewhere accessible
+   `VITE_UNIFIED_BASE_URL`=the graphql endpoint of the [storefront aggregation service](https://github.com/RossoMaguire/aggservice-api-poc/tree/main) wether you have it running locally or somewhere accessible
 
 2. To run the frontend (product page)
 
